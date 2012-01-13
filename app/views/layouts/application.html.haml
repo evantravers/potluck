@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 %html
   %head
-    = stylesheet_link_tag 'application'
-    = javascript_include_tag :defaults
+    = stylesheet_link_tag :application
+    = javascript_include_tag :application
     %title
       Potluck
   %body
-    = yield
+    .topbar
+      .fill
+        .container
+          %a.brand{href: '/'}
+            potluck
+          %ul.nav
+            %li
+              %a{href: '/'}
+                home
+    .container
+      .content
+        .page-header
+          .row#main
+            .span16
+              = yield
+      .footer
+        &copy; Evan Travers 2012
