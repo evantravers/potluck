@@ -15,11 +15,18 @@
             %li
               %a{href: '/'}
                 home
+            %li
+              %a{href: '#'}
+                about
+            %li
+              %a{href: '#'}
+                contact us
+          %form.pull-right{method: 'post', action: '/'}
+            %input.input-small(type='text' name='user' id='user' value='username')/
+            %input.input-small(type='password' name='password' id='password' value='Password')/
+            %button.btn(type='submit')
+              sign in
     .container
-      .content
-        .page-header
-          .row#main
-            .span16
-              = yield
+      = yield
       .footer
-        &copy; Evan Travers 2012
+        &copy; potluck 2012
