@@ -1,26 +1,50 @@
 .content
   .row
+    .span10
+      %h1 welcome [user]!
+    .span4.dashboard_actions
+      %button.btn.primary.large
+        new project
+  .row
     .span4
-      this is a test
+      %h4 your projects:
+      %ul.unstyled
+        %li
+          %a{:href => '#'}
+            Church Cookoff
+        %li
+          %a{:href => '#'}
+            Backyard Casserole
+        %li
+          %a{:href => '#'}
+            Help the Smiths
+      %h4 projects you participate in:
+      %ul.unstyled
+        %li
+          %a{:href => '#'}
+            Church Cookoff
+        %li
+          %a{:href => '#'}
+            Backyard Casserole
+        %li
+          %a{:href => '#'}
+            Help the Smiths
     .span10
       %table.zebra-striped.bordered-table
         %thead
           %tr
+            %th.checkbox
+              %input(type='checkbox' name='select-all' id='select-all' value='')/
             %th
               \#
             %th
-              Name
+              name
             %th
-              Completed
+              completed
         %tbody
           %tr
             %td
-              1
-            %td
-              Chicken
-            %td
-              No
-          %tr
+              %input(type='checkbox' name='item1' id='item' value='')/
             %td
               1
             %td
@@ -29,8 +53,39 @@
               No
           %tr
             %td
+              %input(type='checkbox' name='item2' id='item' value='')/
+            %td
               1
             %td
               Chicken
             %td
               No
+          %tr
+            %td
+              %input(type='checkbox' name='item3' id='item' value='')/
+            %td
+              1
+            %td
+              Chicken
+            %td
+              No
+          %tr
+            %td
+              %input(type='checkbox' name='item4' id='item' value='')/
+            %td
+              1
+            %td
+              Chicken
+            %td
+              No
+          %tr
+            %td
+              %input(type='checkbox' name='item5' id='item' value='')/
+            %td
+              1
+            %td
+              Chicken
+            %td
+              No
+      .task_actions
+        new task | delete tasks | select all
