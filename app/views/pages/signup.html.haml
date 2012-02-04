@@ -1,18 +1,29 @@
+
 .content
   .row
     .span12.hero-unit
       %h1
         welcome
         %small
-          please to be logging in...
+          please to be signing up...
   .row
     .span6
-      this is a sentence describing the login process
+      this is a sentence describing the sign up process
     .span8.login
       %form
         %fieldset
           %h1
-            log in
+            sign up
+          .clearfix
+            %label{for: "first_name"}
+              first name
+            .input
+              %input(name="first_name" id="username")
+          .clearfix
+            %label{for: "email"}
+              last name
+            .input
+              %input(name="email" id="username")
           .clearfix
             %label{for: "email"}
               e-mail
