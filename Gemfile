@@ -29,10 +29,10 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :test, :development do
+  # To use debugger
+  gem 'ruby-debug19', :require => 'ruby-debug'
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
 end
