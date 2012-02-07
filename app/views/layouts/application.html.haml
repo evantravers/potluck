@@ -3,30 +3,28 @@
   %head
     = stylesheet_link_tag :application
     = javascript_include_tag :application
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %title
       Potluck
   %body
-    .topbar
-      .fill
-        .container
-          %a.brand{href: '/'}
-            potluck
-          %ul.nav
-            %li
-              %a{href: '/'}
-                home
-            %li
-              %a{href: '#'}
-                about
-            %li
-              %a{href: '#'}
-                contact us
-          %form.pull-right{method: 'post', action: '/'}
-            %input.input-small(type='text' name='user' id='user' value='username')/
-            %input.input-small(type='password' name='password' id='password' value='Password')/
-            %button.btn(type='submit')
-              sign in
     .container
-      = yield
-      .footer
-        &copy; potluck 2012
+      .row
+        .header
+          %h1
+            potluck
+            %small
+              stuff you need, when you need it
+        .content
+          = yield
+        .row
+          .sidebar
+            %dl
+              %dd
+                =link_to 'home', '#', {class: 'active'}
+              %dd
+                =link_to 'about us', '#'
+              %dd
+                =link_to 'contact us', '#'
+      .row
+        .footer
+          &copy; potluck 2012

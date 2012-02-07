@@ -1,0 +1,31 @@
+@import "foundation";
+.header {
+  @extend .twelve;
+  @extend .columns;
+  padding: 20px;
+  border-bottom: 1px dotted silver;
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  @extend .four;
+  @extend .columns;
+  @extend .pull-eight;
+  dl {
+    @extend .nice;
+    @extend .vertical;
+    @extend .tabs;
+  }
+}
+
+.content {
+  @extend .push-four;
+  @extend .eight;
+  @extend .columns;
+}
+
+.footer {
+  @extend .four;
+  @extend .columns;
+  @extend .offset-by-eight
+}
